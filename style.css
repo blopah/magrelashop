@@ -19,6 +19,10 @@ a {
     justify-content: center;
 }
 
+img {
+    align-self: center;
+}
+
 body {
     margin: 0 auto;
     padding: 0;
