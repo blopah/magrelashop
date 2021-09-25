@@ -1,0 +1,22 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "api_magrelas_shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blopah/magrelashop.git"
+  },
+  "author": "axel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blopah/magrelashop/issues"
+  },
+  "homepage": "https://github.com/blopah/magrelashop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
