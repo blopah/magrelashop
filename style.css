@@ -348,12 +348,47 @@ li {
     width: fit-content;
 }
 
+/* rodape */
 
+.rodape {
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    max-height: 200px;
+}
 
+.descricao-footer {
+    flex: 1;
+}
 
+.integrantes-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
 
+.individuo-footer {
+    display: flex;
+    max-height: 25%;
+}
 
+.foto-individuo {
+    display: flex;
+    max-height: 100%;
+} 
 
+.foto-individuo img {
+    width: 100%;
+    border-radius: 100px;
+    padding: 10px;
+    max-height: 100%;
+}
+
+.texto-individuo {
+    padding: 10px;
+    
+}
 
 
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magrela Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header class="cabecalho">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+
+                </a>
+            </div>
+            <div class="busca">
+                <input type="text" placeholder="Digite o que você procura">
+            </div>
+            <div class="opcoes">
+                <div class="login">
+                    <a href="#">
+                        <div class="img_opcoes">
+                            <img src="img/perfil.png" alt="">
+                        </div>
+                        <div class="txt_opcoes">Entre ou se <br>cadastre</div>
+                    </a>
+                </div>
+                <div class="suporte">
+                    <a href="#">
+                        <div class="img_opcoes">
+                            <img src="img/suporte.png" alt="">
+                        </div>
+                        <div class="txt_opcoes">Central de <br>suporte</div>
+
+                    </a>
+                </div>
+                <div class="carrinho">
+                    <a href="#">
+                        <div class="img_opcoes">
+                            <img src="img/carrinho.png" alt="">
+                        </div>
+                        <div class="txt_opcoes txt_carrinho">Carrinho<span id="valor_carrinho">R$ 0,00</span></div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <nav class="menu">
+            <ul class="lista_menu">
+                <li class="item_menu">
+                    <a href="catalogo.html">
+                        VERONA
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="catalogo.html">
+                        MONTAIN BIKE
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="catalogo.html">
+                        RETRO
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="catalogo.html">
+                        BMX
+                    </a>
+                </li>
+                <li class="item_menu">
+                    <a href="catalogo.html">
+                        E-BIKE
+                    </a>
+                </li>
+            </ul>
+            <ul class="lista_promo">
+                <li class="item_promo">
+                    <a href="catalogo.html">
+                        SUPER OFERTAS
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- header fim -->
+
+
+
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById("radio" + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 5000)
+        </script>
+        <!--image slider end-->
+    </main>
+</body>
+
+</html>
