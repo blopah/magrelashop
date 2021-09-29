@@ -7,11 +7,19 @@ router.get('/',(req,res,next)=>{
     });
 });
 
-router.post('/:id_usuario',(req,res,next)=>{
-    const id = req.params.id_usuario
+router.post('/',(req,res,next)=>{
+    const cliente ={
+        id_cliente: req.body.id_cliente,
+        nome_cliente: req.body.nome_cliente,
+        telefone: req.body.telefone, 
+        cpf_cnpj:req.body.cpf_cnpj,
+        cep:req.body.cep,
+        Num_end:req.body,
+        e_mail:req.body.e_mail
+    }
     res.status(201).send({
-        mensagem:'usando o post na rota de clientes',
-        id:id
+        mensagem:'Insere um cliente',
+        clienteCriado:cliente
     });
 });
 

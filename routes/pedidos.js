@@ -7,10 +7,16 @@ router.get('/',(req,res,next)=>{
     });
 });
 router.post('/',(req,res,next)=>{
-    res.status(201).send({
-        mensagem:'usando o post na rota pedidos por ID',
-   
-    });
+    const pedidos = {
+        id_produto:req.body.id_produto,
+        id_pedido:req.body.id_pedido,
+        nome_cliente:req.body.nome_cliente,
+    }
+     res.status(201).send({
+           mensagem:'o pedido foi criado' ,
+           pedidoCriado:pedidos
+        })
+
 });
 router.post('/:id_usuario',(req,res,next)=>{
     const id = req.params.id_usuario
