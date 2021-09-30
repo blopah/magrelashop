@@ -16,7 +16,6 @@ router.post('/',(req,res,next)=>{
            mensagem:'o pedido foi criado' ,
            pedidoCriado:pedidos
         })
-
 });
 router.post('/:id_usuario',(req,res,next)=>{
     const id = req.params.id_usuario
