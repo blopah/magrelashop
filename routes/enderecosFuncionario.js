@@ -1,7 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../mysql').pool;
 
 router.get('/',(req,res,next)=>{
+    mysql.getConnection((error,conn)=>{
+        conn.query(
+            'SELECT * FROM '
+        )
+    })
+    res.status(200).send({
+        mensagem:'usando o get na rota de endereções'
+    });
+});
+router.get('/:id_serv',(req,res,next)=>{
+
     res.status(200).send({
         mensagem:'usando o get na rota de endereções'
     });
