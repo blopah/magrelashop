@@ -24,7 +24,6 @@ router.get('/',(req,res,next)=>{
     })
 });
 router.post('/',(req,res,next)=>{
-
     mysql.getConnection((error, conn)=>{
         conn.query(
             'INSERT INTO clientes (id_cliente, nome_cliente, telefone, cpf_cnpj, cep, num_end, email) VALUES(?,?,?,?,?,?,?)',
