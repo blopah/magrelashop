@@ -4,6 +4,7 @@ const mysql = require('../mysql').pool;
 
 router.get('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'SELECT * FROM clientes',
             [req.body.id_cliente,req.body.nome_cliente,req.body.telefone,req.body.cpf_cnpj,req.body.cep,req.body.num_end,req.body.email],
@@ -25,6 +26,7 @@ router.get('/',(req,res,next)=>{
 });
 router.post('/',(req,res,next)=>{
     mysql.getConnection((error, conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'INSERT INTO clientes (id_cliente, nome_cliente, telefone, cpf_cnpj, cep, num_end, email) VALUES(?,?,?,?,?,?,?)',
             [req.body.id_cliente,req.body.nome_cliente,req.body.telefone,req.body.cpf_cnpj,req.body.cep,req.body.num_end,req.body.email],
@@ -68,6 +70,7 @@ router.get('/:id_cliente',(req,res,next)=>{
 });
 router.delete('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'DELETE FROM clientes WHERE id_cliente =?;',
             [req.body.id_cliente],

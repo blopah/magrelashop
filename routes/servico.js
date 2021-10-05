@@ -4,6 +4,7 @@ const mysql = require('../mysql').pool;
 
 router.get('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             `SELECT * FROM servico`,
             [req.body.id_serv, 
@@ -30,6 +31,7 @@ router.get('/',(req,res,next)=>{
 });
 router.get('/:id_serv', (req,res,next)=>{
     mysql.getConnection((error, conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'SELECT*FROM servico WHERE id_serv =?;',
             [req.params.id_serv],
@@ -51,6 +53,7 @@ router.get('/:id_serv', (req,res,next)=>{
 })
 router.post('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'INSERT INTO servico(id_serv, id_funcionario, cep, cpf, tipo_servico, id_pedido,valor_serv)VALUE(?,?,?,?,?,?,?)',
             [req.body.id_serv, req.body.id_funcionario,req.body.cep,req.body.cpf,req.body.tipo_servico,req.body.id_pedido,req.body.valor_serv],
@@ -72,6 +75,7 @@ router.post('/',(req,res,next)=>{
 });
 router.delete('/',(req,res,next)=>{
    mysql.getConnection((error,conn)=>{
+    if (error) {return res.status(500).send({error:error}) }
        conn.query(
            'DELETE FROM servico WHERE id_serv= ?;',
            [req.body.id_serv],

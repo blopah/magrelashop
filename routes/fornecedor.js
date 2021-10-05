@@ -5,6 +5,7 @@ const mysql = require('../mysql').pool;
 
 router.get('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'SELECT * FROM fornecedor',
             [req.body.id_fornecedor, req.body.nome, req.body.num_end, req.body.cep,req.body.telefone,req.body.cnpj],
@@ -48,6 +49,7 @@ router.get('/:id_fornecedor',(req,res,next)=>{
 });
 router.post('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'INSERT INTO fornecedor (id_fornecedor, nome, num_end, cep, telefone, cnpj)VALUES(?,?,?,?,?,?)',
             [req.body.id_fornecedor, req.body.nome, req.body.num_end, req.body.cep, req.body.telefone, req.body.cnpj],
@@ -67,8 +69,9 @@ router.post('/',(req,res,next)=>{
         )
     })
 });
-router.delete('/',(req,res,next)=>{
+router.delete('/:id_fornecedor',(req,res,next)=>{
    mysql.getConnection((error,conn)=>{
+    if (error) {return res.status(500).send({error:error}) }
        conn.query(
            'DELETE FROM fornecedor WHERE id_fornecedor=?;',
            [req.body.id_fornecedor],
@@ -88,7 +91,7 @@ router.delete('/',(req,res,next)=>{
        )
    })
 });
-router.put('/',(req,res,next)=>{
+router.put('/:id_fornecedor',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
