@@ -96,10 +96,39 @@ router.delete('/',(req,res,next)=>{
    })
 });
 router.put('/:id_usuario',(req,res,next)=>{
-    const id = req.params.id_usuario
-    res.status(200).send({
-        mensagem:'incluindo  na rota serviços por ID',
-        id:id
-    });
+    mysql.getConnection((error,conn)=>{
+        if (error) {return res.status(500).send({error:error}) }
+        conn.query(
+            `UPDATE servico 
+            SET id_serv
+            id_funcionario=?,
+            cep=?,
+            cpf=?,
+            tipo_servico=?,
+            id_pedido=?,
+            valor_serv
+            WHERE id_serv=?;`,
+            [req.body.id_serv,
+            req.body.id_funcionario,
+            req.body.cep,
+            req.body.cpf,
+            req.body.tipo_servico,
+            req.body.id_pedido,
+            req.body.valor_serv],
+             (error,resultado,fields)=>{
+                 conn.release();
+                 if(error){
+                     res.status(500).send({
+                         error:error,
+                         Response:null
+                     })
+                 }
+                 res.status(201).send({
+                     mensagem:'servico modificado com sucesso',
+                     id_produto:resultado
+                 });
+             }
+        )
+    })
 });
 module.exports = router;
