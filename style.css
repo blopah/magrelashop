@@ -160,7 +160,6 @@ body {
 
 .item_promo a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
 li {
@@ -204,7 +203,6 @@ li {
     justify-content: center;
 }
 
-
 .manual-btn {
     border: 2px solid red;
     padding: 5px;
@@ -222,19 +220,19 @@ li {
     background-color: red;
 }
 
-#radio1:checked ~ .first {
+#radio1:checked~.first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first {
+#radio2:checked~.first {
     margin-left: -20%;
 }
 
-#radio3:checked ~ .first {
+#radio3:checked~.first {
     margin-left: -40%;
 }
 
-#radio4:checked ~ .first {
+#radio4:checked~.first {
     margin-left: -60%;
 }
 
@@ -259,19 +257,19 @@ li {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
+#radio1:checked~.navigation-auto .auto-btn1 {
     background-color: red;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
+#radio2:checked~.navigation-auto .auto-btn2 {
     background-color: red;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
+#radio3:checked~.navigation-auto .auto-btn3 {
     background-color: red;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
+#radio4:checked~.navigation-auto .auto-btn4 {
     background-color: red;
 }
 
@@ -314,13 +312,11 @@ li {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /* background-color: lawngreen; */
     font-size: 2em;
-    
 }
 
 .descricao_catalogo {
     /* background-color: khaki; */
     font-size: 1.2em;
-    
 }
 
 .preco_catalogo {
@@ -330,7 +326,6 @@ li {
     display: flex;
     justify-content: space-between;
     padding-top: 3%;
-
 }
 
 .valor_catalogo {
@@ -385,7 +380,7 @@ li {
 
 .foto-individuo {
     width: 100px;
-} 
+}
 
 .foto-individuo img {
     border-radius: 100px;
@@ -396,11 +391,160 @@ li {
 
 .texto-individuo {
     padding: 10px;
-    
 }
 
+/* CADASTRO CLIENTE */
 
+html, body {
+    min-height: 100%;
+}
 
+body, div, form, input, select, p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+}
 
+h1 {
+    margin: 0;
+    font-weight: 400;
+}
 
+h3 {
+    margin: 12px 0;
+    color: red;
+}
 
+.main-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid red;
+}
+
+.account-details, .personal-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.account-details>div, .personal-details>div>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.account-details>div, .personal-details>div, input, label {
+    width: 100%;
+}
+
+label {
+    padding: 0 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+input {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.checkbox {
+    margin-bottom: 10px;
+}
+
+select, .children, .gender, .bdate-block {
+    width: calc(100% + 26px);
+    padding: 5px 0;
+}
+
+select {
+    background: transparent;
+}
+
+.gender input {
+    width: auto;
+}
+
+.gender label {
+    padding: 0 5px 0 0;
+}
+
+.bdate-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.birthdate select.day {
+    width: 35px;
+}
+
+.birthdate select.mounth {
+    width: calc(100% - 94px);
+}
+
+.birthdate input {
+    width: 38px;
+    vertical-align: unset;
+}
+
+.checkbox input, .children input {
+    width: auto;
+    margin: -2px 10px 0 0;
+}
+
+.checkbox a {
+    color: red;
+}
+
+.checkbox a:hover {
+    color: greenyellow;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: none;
+    background: red;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: greenyellow;
+}
+
+@media (min-width: 568px) {
+    .account-details>div, .personal-details>div {
+        width: 100%;
+    }
+    label {
+        width: 40%;
+    }
+    input {
+        width: 60%;
+    }
+    select, .children, .gender, .bdate-block {
+        width: calc(60% + 16px);
+    }
+}
+
+/* CADASTRO CLIENTE FIM */
