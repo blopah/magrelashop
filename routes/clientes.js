@@ -84,7 +84,7 @@ router.delete('/',(req,res,next)=>{
                 }
                 res.status(200).send({
                     mensagem:'cliente deletando com sucesso por ID',
-                    id_cliente:resultado
+                   
                 });
             }
         )
@@ -95,16 +95,24 @@ router.put('/',(req,res,next)=>{
    mysql.getConnection((error,conn)=>{
        if (error) {return res.status(500).send({error:error}) }
        conn.query(
-            `UPDATE clientes
-                SET id_cliente = ?,
-                nome_cliente= ?,
-                telefone= ?,
-                cpf_cnpj= ?,
-                cep= ?,
-                num_end= ?,
-                email= ?
-            `,
-            [req.body.id_cliente,req.body.nome_cliente,req.body.telefone,req.body.cpf_cnpj,req.body.cep,req.body.num_end,req.body.email],
+            `UPDATE clientes 
+                SET id_cliente
+                nome_cliente=?, 
+                telefone=?,
+                cpf_cnpj=?, 
+                cep=?, 
+                num_end=?,
+                email=?,
+                WHERE id_cliente=?;`,
+            [
+            req.body.nome_cliente,
+            req.body.telefone,
+            req.body.cpf_cnpj,
+            req.body.cep,
+            req.body.num_end,
+            req.body.email,
+            req.body.id_cliente
+            ],
             (error,resultado,fields)=>{
                 conn.release();
                 if(error){
@@ -115,7 +123,7 @@ router.put('/',(req,res,next)=>{
                 }
                 res.status(201).send({
                     mensagem:'cliente modificado com sucesso',
-                    id_cliente:resultado.insertId
+                    id_cliente:resultado
                 });
             }
        )

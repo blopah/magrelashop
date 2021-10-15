@@ -53,7 +53,20 @@ router.post('/',(req,res,next)=>{
     mysql.getConnection((error, conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-            'SELECT * FROM pedidos',
+        `INSERT INTO pedidos (
+            id_produto,
+            id_pedido,
+            id_cliente,
+            valor_pagto,
+            id_funcionario,
+            id_serv, 
+            quantidade,
+            cpf_cnpj,
+            produto_id_produto,
+            clientes_id_cliente,
+            servico_id_serv,
+            enderecos_funcionario_id_funcionario
+            cnpj)VALUES(?,?,?,?,?,?)`,
             [req.body.id_pedido, req.body.id_cliente, req.body.valor_pagto, req.body.id_funcionario, req.body.id_serv, req.body.quantidade, req.body.cpf_cnpj, req.body.produto_id_produto, req.body.clientes_id_cliente, req.body.servico_id_serv, req.body.enderecos_funcionario_id_funcionario],
             (error,resultado,fields)=>{
                 conn.release();
@@ -77,8 +90,8 @@ router.delete('/:id_pedido',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-        'SELECT * FROM pedidos',
-        [req.body.id_produto],
+            'DELETE FROM pedido WHERE id_pedido =?;',
+            [req.body.id_pedido],
         (error,resultado,fields)=>{
             conn.release();
                 if (error) {
@@ -89,7 +102,7 @@ router.delete('/:id_pedido',(req,res,next)=>{
             }
             res.status(200).send({
             mensagem:'pedido deletando com sucesso por ID',
-                id_cliente:resultado
+                id_pedido:resultado
              })
             }
         )

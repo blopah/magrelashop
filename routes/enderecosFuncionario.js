@@ -94,8 +94,32 @@ router.put('/:id_funcionario',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-            'SELECT * FROM enderecos_funcionario',
-            [req.body.id_funcionario],
+            `UPDATE enderecos_funcionarios 
+            SET id_funcionario
+            cidade=?, 
+            uf=?,
+            bairro=?, 
+            logradouro=?, 
+            cep=?,
+            telefone=?,
+            id_funcionario=?,
+            nome=?,
+            funcao=?,
+            salario=?,
+            cpf=?,
+            WHERE id_funcionario=?;`,
+            [req.body.id_funcionario, 
+            req.body.cidade,
+            req.body.uf,
+            req.body.bairro,
+            req.body.logradouro, 
+            req.body.cep,
+            req.body.telefone,
+            req.body.id_funcionario,
+            req.body.nome,
+            req.body.funcao,
+            req.body.salario,
+            req.body.cpf],
              (error,resultado,fields)=>{
                  conn.release();
                  if(error){

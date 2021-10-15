@@ -91,19 +91,12 @@ router.delete('/:id_fornecedor',(req,res,next)=>{
        )
    })
 });
-router.put('/:id_fornecedor',(req,res,next)=>{
+router.put('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-            `UPDATE fornecedor
-                SET id_fornecedor =?,
-                nome = ?,
-                num_end =?,
-                cep =?,
-                telefone=?,
-                cnpj=?,
-            `,
-            [req.body.id_fornecedor, req.body.nome,req.body.num_end,req.body.cep,req.body.telefone,req.body.cnpj],
+            'UPDATE fornecedor SET nome = ?, num_end =?, cep =?, telefone=?, cnpj=?, WHERE id_fornecedor=?',
+            [req.body.nome,req.body.num_end,req.body.cep,req.body.telefone,req.body.cnpj,req.body.id_fornecedor],
             (error,resultado,fields)=>{
                 conn.release();
                 if (error) {

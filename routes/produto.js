@@ -7,7 +7,13 @@ router.get('/',(req,res,next)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
             'SELECT * FROM produto',
-            [req.body.id_fornecedor, req.body.id_produto, req.body.descricao, req.body.preco, req.body.categoria, req.body.quantidade, req.body.fornecedor_id_fornecedor],
+            [req.body.id_fornecedor,
+            req.body.id_produto,
+            req.body.descricao,
+            req.body.preco,
+            req.body.categoria,
+            req.body.quantidade,
+            req.body.fornecedor_id_fornecedor],
             (error,resultado,fields)=>{
                 conn.release();
                 if (error) {
@@ -50,7 +56,14 @@ router.post('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-            '',
+            `INSERT INTO produto 
+            id_fornecedor, 
+            id_produto,
+            descricao,
+            preco,
+            categoria,
+            quantidade,
+            fornecedor_id_fornecedor VALUE(?,?,?,?,?,?,?)`,
             [req.body.id_fornecedor,req.body.id_produto,req.body.descricao,req.body.preco,req.body.categoria,req.body.quantidade,req.body.fornecedor_id_fornecedor],
             (error,resultado,fields)=>{
                 conn.release();
@@ -72,7 +85,7 @@ router.delete('/', (req,res,next)=>{
         mysql.getConnection((error,conn)=>{
             if (error) {return res.status(500).send({error:error}) }
             conn.query(
-            '',
+            'DELETE FROM produto WHERE id_produto=?:',
             [req.body.id_produto],
             (error,resultado,fields)=>{
                 conn.release();
@@ -94,7 +107,15 @@ router.put('/',(req,res,next)=>{
     mysql.getConnection((error,conn)=>{
         if (error) {return res.status(500).send({error:error}) }
         conn.query(
-            '',
+            `UPDATE produto 
+            SET id_produto
+            id_produto=?,
+            descricao=?,
+            preco=?,
+            categoria=?,
+            quantidade=?,
+            fornecedor_id_fornecedor
+            WHERE id_produto=?;`,
             [req.body.id_fornecedor,req.body.id_produto,req.body.descricao,req.body.preco,req.body.categoria,req.body.quantidade,req.body.fornecedor_id_fornecedor],
              (error,resultado,fields)=>{
                  conn.release();
