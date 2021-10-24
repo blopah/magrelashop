@@ -16,6 +16,10 @@ a {
     justify-content: center;
 }
 
+.info_produto a {
+    justify-content: flex-start;
+}
+
 img {
     align-self: center;
 }
@@ -285,6 +289,10 @@ li {
     /* background-color: bisque; */
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
 .imagem_catalogo {
@@ -342,6 +350,93 @@ li {
     font-size: 1em;
     width: fit-content;
 }
+
+/* produto inicio */
+
+
+
+.imagem_produto {
+    /* background-color: gold; */
+    flex: 1;
+    padding: 1%;
+}
+
+.imagem_produto img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.info_produto {
+    /* background-color: purple; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3%;
+    height: 80vh;
+    width: 100%;
+}
+
+.titulo_produto {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* background-color: lawngreen; */
+    font-size: 2em;
+}
+
+.descricao_produto {
+    /* background-color: khaki; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10% 5% 10%;
+    
+}
+
+.descricao_produto h3 {
+    /* background-color: khaki; */
+    color: black;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.preco_produto {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* background-color: hotpink; */
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 3%; */
+}
+
+.valor_produto {
+    font-family: inherit;
+    align-self: center;
+    font-size: 2em;
+    color: greenyellow;
+}
+
+.comprar_produto {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    /* padding: 10px; */
+    width: 50%;
+    font-size: 2em;
+    width: fit-content;
+    
+    
+}
+
+.super_oferta_produto {
+    border-radius: 20px;
+    padding: 10px;
+    width: 50%;
+    font-size: 1em;
+    width: fit-content;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* produto fim */
 
 /* rodape */
 
