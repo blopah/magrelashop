@@ -91,19 +91,20 @@
 
         <div class="main-block">
             <form action="/">
-                <h1>Cadastrar produto</h1>
+                <h1>Cadastrar bicicletas</h1>
                 <fieldset>
                     <legend>
                         <h3>Dados do produto</h3>
                     </legend>
+                    <input type="radio" name="gender" value="cliente"> Bicileta para o cliente
+                    <input type="radio" name="gender" value="loja"> Bicileta da loja
                     <div class="account-details">
                         <div><label>descrição</label><input type="descricao" name="desc_prod" required></div>
                         <div><label>preço</label><input type="preco" name="preco_prod" required></div>
                         <div><label>categoria</label><input type="categ" name="categ_prod" required></div>
-                        <div><label>quantidade</label><input type="qtd" name="qtd_prdo" required></div>
                     </div>
                 </fieldset>
-                <button type="submit" href="/">Submit</button>
+                <button type="submit" href="/">Salvar</button>
             </form>
         </div>
 
