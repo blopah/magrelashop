@@ -627,6 +627,43 @@ button:hover {
     background: greenyellow;
 }
 
+.home_funcs {
+    /* background-color: aqua; */
+    display: flex;
+    width: 100%;
+    height: 50vh;
+}
+
+.home_funcs ul {
+    width: 100%;
+    height: 100%;
+}
+
+.home_funcs ul li {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    margin: 5%;
+}
+.home_funcs ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    border-radius: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    /* color: white; */
+    transition: all 0.5s;
+}
+
+.home_funcs ul li a:hover {
+    background-color: red;
+    color: white;
+}
+
 @media (min-width: 568px) {
     .account-details>div, .personal-details>div {
         width: 100%;
