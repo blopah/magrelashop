@@ -90,7 +90,7 @@
 
 
         <div class="main-block">
-            <form action="/">
+            <form method="POST" action="PHP/CadCli.php">
                 <h1>Cadastre-se</h1>
                 <fieldset>
                     <legend>
@@ -100,7 +100,7 @@
                         <div><label>Email*</label><input type="email" name="email" required></div>
                         <div><label>Repita o email*</label><input type="email" name="email" required></div>
                         <div><label>senha*</label><input type="password" name="senha" required></div>
-                        <div><label>REpita a senha*</label><input type="password" name="senha" required></div>
+                        <div><label>Repita a senha*</label><input type="password" name="senha" required></div>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -110,8 +110,8 @@
                     <div class="personal-details">
                         <div>
                             <div><label>Nome*</label><input type="text" name="name" required></div>
-                            <div><label>Telefone*</label><input type="tel" name="name" required></div>
-                            <div><label>CPF/CNPJ</label><input type="text" name="name"></div>
+                            <div><label>Telefone*</label><input type="tel" name="Telefone" required></div>
+                            <div><label>CPF/CNPJ</label><input type="text" name="CPF" required></div>
                         </div>
                     </div>
                 </fieldset>
@@ -121,8 +121,8 @@
                     </legend>
                     <div class="personal-details">
                         <div>
-                            <div><label>CEP*</label><input type="number" name="name" required></div>
-                            <div><label>Numero*</label><input type="number" name="name" required></div>
+                            <div><label>CEP*</label><input type="number" name="CEP" required></div>
+                            <div><label>Numero*</label><input type="number" name="Numero" required></div>
                         </div>
                     </div>
                 </fieldset>
