@@ -13,8 +13,8 @@
     <main>
         <header class="cabecalho">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="">
+                <a href="../index.html">
+                    <img src="../img/logo.png" alt="">
 
                 </a>
             </div>
@@ -25,7 +25,7 @@
                 <div class="login">
                     <a href="cad_cliente.html">
                         <div class="img_opcoes">
-                            <img src="img/perfil.png" alt="">
+                            <img src="../img/perfil.png" alt="">
                         </div>
                         <div class="txt_opcoes">Entre ou se <br>cadastre</div>
                     </a>
@@ -33,7 +33,7 @@
                 <div class="suporte">
                     <a href="#">
                         <div class="img_opcoes">
-                            <img src="img/suporte.png" alt="">
+                            <img src="../img/suporte.png" alt="">
                         </div>
                         <div class="txt_opcoes">Central de <br>suporte</div>
 
@@ -42,49 +42,13 @@
                 <div class="carrinho">
                     <a href="#">
                         <div class="img_opcoes">
-                            <img src="img/carrinho.png" alt="">
+                            <img src="../img/carrinho.png" alt="">
                         </div>
                         <div class="txt_opcoes txt_carrinho">Carrinho<span id="valor_carrinho">R$ 0,00</span></div>
                     </a>
                 </div>
             </div>
         </header>
-        <nav class="menu">
-            <ul class="lista_menu">
-                <li class="item_menu">
-                    <a href="catalogo.html">
-                        VERONA
-                    </a>
-                </li>
-                <li class="item_menu">
-                    <a href="catalogo.html">
-                        MONTAIN BIKE
-                    </a>
-                </li>
-                <li class="item_menu">
-                    <a href="catalogo.html">
-                        RETRO
-                    </a>
-                </li>
-                <li class="item_menu">
-                    <a href="catalogo.html">
-                        BMX
-                    </a>
-                </li>
-                <li class="item_menu">
-                    <a href="catalogo.html">
-                        E-BIKE
-                    </a>
-                </li>
-            </ul>
-            <ul class="lista_promo">
-                <li class="item_promo">
-                    <a href="catalogo.html">
-                        SUPER OFERTAS
-                    </a>
-                </li>
-            </ul>
-        </nav>
         <!--cadastro start-->
 
 
@@ -96,15 +60,23 @@
                     <legend>
                         <h3>Dados do produto</h3>
                     </legend>
-                    <input type="radio" name="gender" value="cliente"> Bicileta para o cliente
-                    <input type="radio" name="gender" value="loja"> Bicileta da loja
+						<input type="radio" name="gender" value="cliente">Bicicleta para o cliente
+						<input type="radio" name="gender" value="loja"> Bicicleta da loja
                     <div class="account-details">
                         <div><label>descrição</label><input type="descricao" name="desc_prod" required></div>
                         <div><label>preço</label><input type="preco" name="preco_prod" required></div>
-                        <div><label>categoria</label><input type="categ" name="categ_prod" required></div>
+					<p>categoria</p><select id=categoria required>
+						<option value="" selected="selected">Selecione a categoria</option>
+						<option value="VERONA" >VERONA</option>
+						<option value="MONTAIN BIKE" >MONTAIN BIKE</option>
+						<option value="RETRO" >RETRO</option>
+						<option value="BMX" >BMX</option>
+						<option value="E-BIKE" >E-BIKE</option>
+					</select>
+					<div><label>Quantidade</label><input type="number" name="categ_prod" min="1" required value="1"</div>
                     </div>
                 </fieldset>
-                <button type="submit" href="/">Salvar</button>
+                <button type="submit" href="/">Cadastrar</button>
             </form>
         </div>
 
