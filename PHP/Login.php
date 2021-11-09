@@ -15,7 +15,7 @@
 
 	if ($acesso['senha'] <> $senha) {
 		echo "<script language='javascript' type='text/javascript'>
-				alert('Usuário ou senha incorretos!');</script>";
+				alert('Usuário ou senha incorretos!');window.location.href='../funcionarios/indexLogin.html'</script>";
 	}else{
 		if($acesso['situacao'] <> 'Ativo'){
 			echo "<script language='javascript' type='text/javascript'>
