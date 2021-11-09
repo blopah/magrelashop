@@ -9,20 +9,20 @@
 	$ID_Prod = $cliente['id_produto'] + 1;
 	$ID_Forn = rand(1, 3);
 
-	$descricao = $_POST['descricao'];
-	$preco = MD5($_POST['preco']);
+	$descricao = $_POST['desc_prod'];
+	$preco = $_POST['preco_prod'];
 	$categoria = $_POST['categoria'];
-	$Quantidade = $_POST['quantidade'];
+	$Quantidade = $_POST['qtd'];
 	
 	$query = "INSERT INTO produto VALUES ('$ID_Forn', '$ID_Prod', '$descricao', '$preco', '$categoria', '$Quantidade')";
 	$insert = mysqli_query($mysqli, $query) or die(mysqli_error($mysqli));
 	
 	if($insert){
-		echo "<script language='javascript' type='text/javascript'>alert('Produto cadastrado com sucesso! ');window.location.href='../'</script>";
+		echo "<script language='javascript' type='text/javascript'>alert('Produto cadastrado com sucesso! ');window.location.href='../funcionarios/cad_bicl_geral.html'</script>";
 		
 	}else{
 		//echo ("Errormessage: %s\n", $insert->error);
-		echo "<script language='javascript' type='text/javascript'>alert('ERRO!!!!! Verifique o erro na tela! ');</script>";
+		echo "<script language='javascript' type='text/javascript'>alert('ERRO!!!!! Verifique o erro na tela! ');window.location.href='../funcionarios/cad_bicl_geral.html'</script>";
 		
 	}
 	
