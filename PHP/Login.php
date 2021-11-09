@@ -23,7 +23,7 @@
 		}else{
 			$_SESSION['VendedorLogado'] = true;
 			echo "<script language='javascript' type='text/javascript'>
-					alert('" . $acesso['funcao'] . " logado com sucesso!!!');window.location.href='homeVen.html'</script>";
+					alert('" . $acesso['funcao'] . " logado com sucesso!!!');window.location.href='../funcionarios/homeVen.html'</script>";
 		}
 	}
 
