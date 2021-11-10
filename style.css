@@ -675,7 +675,7 @@ button:hover {
         width: 60%;
     }
     select, .children, .gender, .bdate-block {
-        width: calc(60% + 16px);
+        width: 60%;
     }
 }
 
