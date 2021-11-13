@@ -18,11 +18,11 @@
 	$insert = mysqli_query($mysqli, $query) or die(mysqli_error($mysqli));
 	
 	if($insert){
-		echo "<script language='javascript' type='text/javascript'>alert('Produto cadastrado com sucesso! ');window.location.href='../funcionarios/cad_bicl_geral.html'</script>";
+		echo "<script language='javascript' type='text/javascript'>alert('Produto cadastrado com sucesso! ');window.location.href='cad_bicl_geral.php'</script>";
 		
 	}else{
 		//echo ("Errormessage: %s\n", $insert->error);
-		echo "<script language='javascript' type='text/javascript'>alert('ERRO!!!!! Verifique o erro na tela! ');window.location.href='../funcionarios/cad_bicl_geral.html'</script>";
+		echo "<script language='javascript' type='text/javascript'>alert('ERRO!!!!! Verifique o erro na tela! ');window.location.href='cad_bicl_geral.php'</script>";
 		
 	}
 	

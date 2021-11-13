@@ -13,9 +13,9 @@
     <main>
 	
 	
-	<?php
-		include ('header.php');
-	?>
+		<?php
+			include ('header.php');
+		?>
 	
         <!--image slider start-->
         <section class="slide-show">

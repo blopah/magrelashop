@@ -6,49 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magrela Shop</title>
-    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <main>
-        <header class="cabecalho">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../img/logo.png" alt="">
-
-                </a>
-            </div>
-            <div class="busca">
-                <input type="text" placeholder="Digite o que você procura">
-            </div>
-            <div class="opcoes">
-                <div class="login">
-                    <a href="../cad_cliente.html">
-                        <div class="img_opcoes">
-                            <img src="../img/perfil.png" alt="">
-                        </div>
-                        <div class="txt_opcoes">Entre ou se <br>cadastre</div>
-                    </a>
-                </div>
-                <div class="suporte">
-                    <a href="#">
-                        <div class="img_opcoes">
-                            <img src="../img/suporte.png" alt="">
-                        </div>
-                        <div class="txt_opcoes">Central de <br>suporte</div>
-
-                    </a>
-                </div>
-                <div class="carrinho">
-                    <a href="#">
-                        <div class="img_opcoes">
-                            <img src="../img/carrinho.png" alt="">
-                        </div>
-                        <div class="txt_opcoes txt_carrinho">Carrinho<span id="valor_carrinho">R$ 0,00</span></div>
-                    </a>
-                </div>
-            </div>
-        </header>
+        
+	
+	<?php
+		include ('header.php');
+	?>
+	
+    
         <!--cadastro start-->
 
 

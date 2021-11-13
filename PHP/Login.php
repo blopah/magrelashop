@@ -23,6 +23,13 @@
 		}else{
 			if($acesso['funcao'] == 'Vendedor'){
 				$_SESSION['VendedorLogado'] = true;
+				
+				
+				echo '<script>';
+				echo 'console.log('.  session_status() .')';
+				echo '</script>';	
+
+				
 				echo "<script language='javascript' type='text/javascript'>
 						alert('" . $acesso['funcao'] . " logado com sucesso!!!');window.location.href='homeVen.php'</script>";
 				
@@ -37,4 +44,8 @@
 		}
 	}
 
+
+			echo '<script>';
+			echo 'console.log('. session_status() .')';
+			echo '</script>';	
 ?>

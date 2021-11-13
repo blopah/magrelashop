@@ -10,42 +10,15 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/logo.png" alt="">
-
-            </a>
-        </div>
-        <div class="busca">
-            
-        </div>
-        <div class="opcoes">
-            <div class="carrinho">
-            </div>
-            <div class="login">
-
-                <div class="img_opcoes">
-                    <img src="../img/perfil.png" alt="">
-                </div>
-                <div class="txt_opcoes">Bem vindo <br>Vendedor</div>
-
-            </div>
-            <div class="suporte">
-                <a href="indexFunc.html">
-                    <div class="img_opcoes">
-                        <img src="../img/funcs.png" alt="">
-                    </div>
-                    <div class="txt_opcoes">Página de<br>funcionários</div>
-
-                </a>
-            </div>
-        </div>
-    </header>
+	
+	<?php
+		include ('header.php');
+	?>
+	
     <nav class="menu home_funcs">
         <ul class="lista_menu">
             <li class="item_menu">
-                <a href="cad_bicl_geral.html">
+                <a href="cad_bicl_geral.php">
                     Cadastro Geral de Bicicletas  
                 </a>
             </li>

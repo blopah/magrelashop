@@ -18,6 +18,7 @@
 				<div class="txt_opcoes">Cadastre-se</div>
 			</a>
 		</div>
+		
 		<div class="suporte">
 			<a href="indexLogin.php">
 				<div class="img_opcoes">
@@ -27,6 +28,35 @@
 
 			</a>
 		</div>
+		
+		<?php 
+			echo '<script>';
+			echo 'console.log('. session_status() .')';
+			echo '</script>';
+
+			echo '<script>';
+			echo 'console.log('. $_SESSION['VendedorLogado'] == true .')';
+			echo '</script>';	
+
+			echo '<script>';
+			echo 'console.log('. session_status() .')';
+			echo '</script>';			
+		?>
+		
+		<?php if (session_status() == 2)
+			
+			echo '<div class="sair">
+					<a href="sair.php">
+						<div class="img_opcoes">
+							<img src="../img/funcs.png" alt="">
+						</div>
+						<div class="txt_opcoes">Sair</div>
+
+					</a>
+				</div>'
+			
+		?>
+		
 		<div class="carrinho">
 			<a href="#">
 				<div class="img_opcoes">
