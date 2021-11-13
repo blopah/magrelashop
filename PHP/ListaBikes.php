@@ -12,17 +12,12 @@
 
 <body>
     <main>
-        
 	
 	<?php
-		include ('header.php');
+		include ('headerLogado.php');
 	?>
 	
-    
-        
-		
-		
-		<!-- INICIO LISTA -->
+    <!-- INICIO LISTA -->
 		<div class="main-block">
 			<div id="list" class="row">
 					

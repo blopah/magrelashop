@@ -12,14 +12,12 @@
 
 <body>
     <main>
-        
 	
 	<?php
-		include ('header.php');
+		include ('headerLogado.php');
 	?>
 	
-    
-        <!--cadastro start-->
+     <!--cadastro start-->
 
 
 

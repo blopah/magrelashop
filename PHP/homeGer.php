@@ -15,26 +15,22 @@
 		include ('headerLogado.php');
 	?>
 	
+    
     <nav class="menu home_funcs">
         <ul class="lista_menu">
-            <li class="item_menu" >
-                <a href="cad_bicl_geral.php">
-                    Cadastro Geral de Bicicletas  
+            <li class="item_menu">
+                <a href="#">
+                    Cadastro de Produtos
                 </a>
             </li>
-            <li class="item_menu" style="background-color: gray;">
+            <li class="item_menu">
                 <a href="#">
-                    Controle de Caixa 
+                    Cadastro de Funcionários
                 </a>
             </li>
-            <li class="item_menu" style="background-color: gray;">
+            <li class="item_menu">
                 <a href="#">
-                    Controle de Estoque 
-                </a>
-            </li>
-            <li class="item_menu" style="background-color: gray;">
-                <a href="#">
-                    Folha de Ponto  
+                    RH
                 </a>
             </li>
         </ul>

@@ -12,45 +12,12 @@
 
 <body>
     <main>
-        <header class="cabecalho">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../img/logo.png" alt="">
-
-                </a>
-            </div>
-            <div class="busca">
-                <input type="text" placeholder="Digite o que você procura">
-            </div>
-            <div class="opcoes">
-                <div class="login">
-                    <a href="../cad_cliente.html">
-                        <div class="img_opcoes">
-                            <img src="../img/perfil.png" alt="">
-                        </div>
-                        <div class="txt_opcoes">Entre ou se <br>cadastre</div>
-                    </a>
-                </div>
-                <div class="suporte">
-                    <a href="#">
-                        <div class="img_opcoes">
-                            <img src="../img/suporte.png" alt="">
-                        </div>
-                        <div class="txt_opcoes">Central de <br>suporte</div>
-
-                    </a>
-                </div>
-                <div class="carrinho">
-                    <a href="#">
-                        <div class="img_opcoes">
-                            <img src="../img/carrinho.png" alt="">
-                        </div>
-                        <div class="txt_opcoes txt_carrinho">Carrinho<span id="valor_carrinho">R$ 0,00</span></div>
-                    </a>
-                </div>
-            </div>
-        </header>
-        <!--cadastro start-->
+	
+	<?php
+		include ('headerLogado.php');
+	?>
+	
+    <!--cadastro start-->
 
 		<?php 
 			$URL_ATUAL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
