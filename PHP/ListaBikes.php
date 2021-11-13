@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magrela Shop</title>
     <link rel="stylesheet" href="../style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -49,38 +50,59 @@
                 </div>
             </div>
         </header>
-        <!--cadastro start-->
-
-
-
-        <div class="main-block">
-            <form method="POST" action="../PHP/CadBike.php">
-                <h1>Cadastrar bicicletas</h1>
-                <fieldset>
-                    <legend>
-                        <h3>Dados do produto</h3>
-                    </legend>
-                    <div class="account-details">
-                        <div><label>descrição</label><input type="descricao" name="desc_prod" required></div>
-                        <div><label>preço</label><input type="text" name="preco_prod" required></div>
-                        <div>
-                            <label>categoria</label><select id=categoria name=categoria required>
-                                <option value="" selected="selected">Selecione a categoria</option>
-                                <option value="VERONA">VERONA</option>
-                                <option value="MONTAIN BIKE">MONTAIN BIKE</option>
-                                <option value="RETRO">RETRO</option>
-                                <option value="BMX">BMX</option>
-                                <option value="E-BIKE">E-BIKE</option>
-                            </select>
-                        </div>
-                        <div><label>Quantidade</label><input type="number" name="qtd" min="1" required value="1"></div>
-                    </div>
-                </fieldset>
-                <button type="submit" href="/">Cadastrar</button>
-            </form>
-                <div><a href="../PHP/ListaBikes.php" class="btn btn-success" role="button">Bikes Cadastradas</a></div>
+        
+		
+		
+		<!-- INICIO LISTA -->
+		<div class="main-block">
+			<div id="list" class="row">
+					
+				<div class="table-responsive col-md-12">
+					<table class="table table-striped" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th>ID Fornecedor</th>
+								<th>ID Produto</th>
+								<th>Descricao</th>
+								<th>Preco</th>
+								<th>Categoria</th>
+								<th>Quantidade</th>
+								<th class="actions">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php 
+						$mysqli = mysqli_connect("localhost", "root", "", "bicicletaria_magrelas");
+						
+						$result = mysqli_query($mysqli, "SELECT * FROM `produto` ORDER BY `id_produto` DESC limit 1");
+						$limite = mysqli_fetch_array($result);
+						
+						for ($i = 1; $i <= $limite['id_produto']; $i++) {
+							
+							$result = mysqli_query($mysqli, "SELECT * FROM `produto` WHERE `id_produto` = " . $i);
+							$bike = mysqli_fetch_array($result);
+							
+								echo "<tr>
+									<td> " . $bike['id_fornecedor'] . " </td>
+									<td> " . $bike['id_produto'] . " </td>
+									<td> " . $bike['descricao'] . " </td>
+									<td> " . $bike['preco'] . " </td>
+									<td> " . $bike['categoria'] . " </td>
+									<td> " . $bike['quantidade'] . " </td>
+									<td class='actions'>
+										<a class='btn btn-warning btn-xs' href='edit.html'>Editar</a>
+										<a class='btn btn-danger btn-xs'  href='#' data-toggle='modal' data-target='#delete-modal'>Excluir</a>
+									</td>
+								</tr>";
+							}
+						?>
+						</tbody>
+					</table>
+				</div>
+					
+			</div> <!-- /#list -->
         </div>
-
+		
         <footer class="rodape">
             <div class="descricao-footer">
                 <h1>Qualquer erro entre em contato com o email SuporteT.I@yahoo.com.br</h1>
