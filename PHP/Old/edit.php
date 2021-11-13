@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magrela Shop</title>-
+    <title>Magrela Shop</title>
     <link rel="stylesheet" href="../style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -81,7 +81,6 @@
 							$result = mysqli_query($mysqli, "SELECT * FROM `produto` WHERE `id_produto` = " . $i);
 							$bike = mysqli_fetch_array($result);
 							
-							if($bike){
 								echo "<tr>
 									<td> " . $bike['id_produto'] . " </td>
 									<td> " . $bike['descricao'] . " </td>
@@ -89,19 +88,16 @@
 									<td> " . $bike['categoria'] . " </td>
 									<td> " . $bike['quantidade'] . " </td>
 									<td class='actions'>
-										<a class='btn btn-warning btn-xs' href='editv2.php?" . $bike['id_produto'] ."'>Editar</a>
-										<a class='btn btn-danger btn-xs'  href='Confirmacao.php?" . $bike['id_produto'] ."' data-toggle='modal' data-target='#delete-modal'>Excluir</a>
+										<a class='btn btn-success btn-xs' href='edit.php'>Confirmar <br> edição</a>
 									</td>
 								</tr>";
 							}
-						}
 						?>
 						</tbody>
 					</table>
 				</div>
 					
 			</div> <!-- /#list -->
-			<a href="ListaBikes.php" class="btn btn-success" role="button">Bikes Cadastradas</a>
         </div>
 		
         <footer class="rodape">
