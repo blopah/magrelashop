@@ -58,7 +58,7 @@
 		?>
 		
 		<div class="carrinho">
-			<a href="#">
+			<a href="Carrinho.php">
 				<div class="img_opcoes">
 					<img src="../img/carrinho.png" alt="">
 				</div>

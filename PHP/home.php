@@ -61,112 +61,43 @@
             </div>
         </section>
         <section class="catalogo">
-            <div class="produto">
-                <a href="../produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                            <div class="super_oferta">Super Oferta</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="produto">
-                <a href="produto.html">
-                    <div class="imagem_catalogo">
-                        <img src="../img/catalogo/bike1.jpg" alt="">
-                    </div>
-                    <div class="info_catalogo">
-                        <div class="titulo_catalogo">Nome da magrela</div>
-                        <div class="descricao_catalogo">Bicicleta feminina Caloi com freio a disco e cubo roletado.
-                            Perfeita para o uso no cotidiano.</div>
-                        <div class="preco_catalogo">
-                            <div class="valor_catalogo">R$ 9999,99</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+		
+			<?php 
+			$mysqli = mysqli_connect("localhost", "root", "", "bicicletaria_magrelas");
+			$result = mysqli_query($mysqli, "SELECT * FROM `produto` ORDER BY `id_produto` DESC limit 1");
+			$limite = mysqli_fetch_array($result);
+			
+			for ($j = 1; $j <= 3; $j++) {
+				for ($i = 1; $i <= $limite['id_produto']; $i++) {
+								
+					$result = mysqli_query($mysqli, "SELECT * FROM `produto` WHERE `id_produto` = " . $i);
+					$bike = mysqli_fetch_array($result);
+					
+					if($bike){
+						echo	"<div class='produto'>
+								<a href='../produto.html'>
+									<div class='imagem_catalogo'>
+										<img src='../img/catalogo/bike1.jpg' alt=''>
+									</div>
+									<div class='info_catalogo'>
+										<div class='titulo_catalogo'>" . $bike['descricao'] . "</div>
+										<div class='quantidade'>
+											<div class='quantidade'>" . $bike['quantidade'] . "</div>
+										</div>
+										<div class='preco_catalogo'>
+											<div class='valor_catalogo'>R$ " . $bike['preco'] . "</div>
+										</div>
+									</div>
+								</a>
+						</div>";
+						
+					}
+					
+				}
+			}
+			?>
+			
+			
         </section>
         <footer class="rodape">
             <div class="descricao-footer">

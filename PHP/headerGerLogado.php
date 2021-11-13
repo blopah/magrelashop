@@ -1,7 +1,7 @@
 
 <header class="cabecalho">
 	<div class="logo">
-		<a href="homeVen.php">
+		<a href="homeGer.php">
 			<img src="../img/logo.png" alt="">
 
 		</a>
@@ -16,11 +16,11 @@
 		</div>
 			
 		<div class="login">
-			<a href="homeVen.php">
+			<a href="homeGer.php">
 				<div class="img_opcoes">
 					<img src="../img/perfil.png" alt="">
 				</div>
-				<div class="txt_opcoes">Bem vindo(a) Vendedor (a)!</div>
+				<div class="txt_opcoes">Bem vindo(a) Gerente!</div>
 			</a>
 		</div>
 		

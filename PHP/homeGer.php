@@ -12,23 +12,23 @@
 <body>
 	
 	<?php
-		include ('headerLogado.php');
+		include ('headerGerLogado.php');
 	?>
 	
     
     <nav class="menu home_funcs">
         <ul class="lista_menu">
-            <li class="item_menu">
+            <li class="item_menu" style="background-color: gray;">
                 <a href="#">
                     Cadastro de Produtos
                 </a>
             </li>
-            <li class="item_menu">
+            <li class="item_menu" style="background-color: gray;">
                 <a href="#">
                     Cadastro de Funcionários
                 </a>
             </li>
-            <li class="item_menu">
+            <li class="item_menu" style="background-color: gray;">
                 <a href="#">
                     RH
                 </a>

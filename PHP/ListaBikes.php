@@ -36,7 +36,6 @@
 						<tbody>
 						<?php 
 						$mysqli = mysqli_connect("localhost", "root", "", "bicicletaria_magrelas");
-						
 						$result = mysqli_query($mysqli, "SELECT * FROM `produto` ORDER BY `id_produto` DESC limit 1");
 						$limite = mysqli_fetch_array($result);
 						
