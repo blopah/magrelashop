@@ -75,7 +75,7 @@
 					
 					if($bike){
 						echo	"<div class='produto'>
-								<a href='../produto.html'>
+								<a href='produto.php?" . $bike['id_produto'] ."'>
 									<div class='imagem_catalogo'>
 										<img src='../img/catalogo/bike1.jpg' alt=''>
 									</div>
