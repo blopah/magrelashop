@@ -67,7 +67,7 @@
 			$result = mysqli_query($mysqli, "SELECT * FROM `produto` ORDER BY `id_produto` DESC limit 1");
 			$limite = mysqli_fetch_array($result);
 			
-			for ($j = 1; $j <= 3; $j++) {
+			for ($j = 1; $j <= 1; $j++) {
 				for ($i = 1; $i <= $limite['id_produto']; $i++) {
 								
 					$result = mysqli_query($mysqli, "SELECT * FROM `produto` WHERE `id_produto` = " . $i);
