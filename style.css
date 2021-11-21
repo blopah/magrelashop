@@ -353,8 +353,6 @@ li {
 
 /* produto inicio */
 
-
-
 .imagem_produto {
     /* background-color: gold; */
     flex: 1;
@@ -390,7 +388,6 @@ li {
     display: flex;
     flex-direction: column;
     margin: 0 10% 5% 10%;
-    
 }
 
 .descricao_produto h3 {
@@ -423,8 +420,6 @@ li {
     width: 50%;
     font-size: 2em;
     width: fit-content;
-    
-    
 }
 
 .super_oferta_produto {
@@ -645,6 +640,7 @@ button:hover {
     width: 100%;
     margin: 5%;
 }
+
 .home_funcs ul li a {
     width: 100%;
     height: 100%;
@@ -680,3 +676,45 @@ button:hover {
 }
 
 /* CADASTRO CLIENTE FIM */
+
+@media screen and (max-width: 700px) {
+    .cabecalho {
+        flex-direction: row;
+    }
+    .logo img {
+        width: 76%;
+    }
+    .opcoes div div {
+        width: 76%;
+    }
+    .txt_opcoes {
+        display: none!important;
+    }
+    .busca {
+        display: none;
+    }
+    .manual-btn {
+        margin-top: 43vw;
+    }
+    .slide, .slide img, .slider {
+        height: 47vw;
+    }
+    .catalogo {
+        width: 90vw;
+    }
+    .imagem_catalogo {
+        flex: 4;
+    }
+    .valor_catalogo {
+        font-size: 20px;
+    }
+    .quantidade {
+        font-size: 25px;
+    }
+    .rodape {
+        flex-direction: column;
+    }
+    .individuo-footer{
+        flex: 1 1 50vw;
+    }
+}
