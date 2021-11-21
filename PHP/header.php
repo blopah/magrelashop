@@ -29,7 +29,7 @@
 			</a>
 		</div>
 		
-		<?php 
+		<!-- <?php 
 			echo '<script>';
 			echo 'console.log('. session_status() .')';
 			echo '</script>';
@@ -41,7 +41,7 @@
 			echo '<script>';
 			echo 'console.log('. session_status() .')';
 			echo '</script>';			
-		?>
+		?> -->
 		
 		<?php if (session_status() == 2)
 			

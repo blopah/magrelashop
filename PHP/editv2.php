@@ -52,11 +52,9 @@
                     </div>
                 </fieldset>
                 <button type="submit" href="/">Atualizar</button>
+                <a type="submit" href="ListaBikes.php" class="btn btn-warning voltarr">Voltar</a>
             </form>
-        </div>
-		<div class="main-block">
-			<a type="submit" href="ListaBikes.php" class="btn btn-warning">Voltar</a>
-		</div> <br>
+        </div> <br>
 
         <footer class="rodape">
             <div class="descricao-footer">

@@ -63,8 +63,8 @@
 					</table>
 				</div>
 					
+				<a href="cad_bicl_geral.php" class="btn btn-success" role="button">Cadastrar Bike</a>
 			</div> <!-- /#list -->
-			<a href="cad_bicl_geral.php" class="btn btn-success" role="button">Cadastrar Bike</a>
         </div>
 		
         <footer class="rodape">

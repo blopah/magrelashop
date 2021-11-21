@@ -500,6 +500,7 @@ body, div, form, input, select, p {
 h1 {
     margin: 0;
     font-weight: 400;
+    /* font-size: 20px; */
 }
 
 h3 {
@@ -515,6 +516,7 @@ h3 {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
+    min-height: 80vh;
 }
 
 form {
@@ -626,12 +628,13 @@ button:hover {
     /* background-color: aqua; */
     display: flex;
     width: 100%;
-    height: 50vh;
+    min-height: 80vh;
 }
 
 .home_funcs ul {
+    display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 80vh;
 }
 
 .home_funcs ul li {
@@ -653,11 +656,17 @@ button:hover {
     font-size: 2em;
     /* color: white; */
     transition: all 0.5s;
+    flex: 1 1 172px;
+    min-height: 100px;
 }
 
 .home_funcs ul li a:hover {
     background-color: red;
     color: white;
+}
+
+.voltarr {
+    margin-top: 5px;
 }
 
 @media (min-width: 568px) {
@@ -714,7 +723,31 @@ button:hover {
     .rodape {
         flex-direction: column;
     }
-    .individuo-footer{
+    .individuo-footer {
         flex: 1 1 50vw;
+    }
+    .produto {
+        flex-direction: column;
+    }
+    .home_funcs ul {
+        align-items: baseline;
+        display: flex;
+        width: 100%;
+        min-height: 80vh;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 20px!important;
+    }
+    .row {
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+    }
+    .table>:not(caption)>*>* {
+        padding: 0 0;
+        text-align: center;
+    }
+    td.actions {
+        width: 4px;
     }
 }
