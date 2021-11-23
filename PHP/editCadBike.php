@@ -29,7 +29,7 @@
 		?>
         <div class="main-block">
             <form method="POST" action="../PHP/editBike.php">
-                <h1>Cadastrar bicicletas</h1>
+                <h1>Editar bicicletas</h1>
                 <fieldset>
                     <legend>
                         <h3>Dados do produto</h3>
@@ -48,18 +48,18 @@
                                 <option value="E-BIKE">E-BIKE</option>
                             </select>
                         </div>
-                        <div><label>Quantidade</label><input type="number" name="qtd" min="1" required value="<?php echo $dados['quantidade'] ?>"></div>
+                        <div><label>Quantidade</label><input type="number" name="qtd" min="1" value="<?php echo $dados['quantidade'] ?>" readonly style="background-color: Lightgray;"></div>
                     </div>
                 </fieldset>
                 <button type="submit" href="/">Atualizar</button>
                 <a type="submit" href="ListaBikes.php" class="btn btn-warning voltarr">Voltar</a>
             </form>
-        </div> <br>
-
-        <footer class="rodape">
-            <div class="descricao-footer">
-                <h1>Qualquer erro entre em contato com o email SuporteT.I@yahoo.com.br</h1>
-            </div>
+        </div>
+		<br>
+		
+        <?php 
+            include('footer.php')
+        ?>
 
         </footer>
     </main>

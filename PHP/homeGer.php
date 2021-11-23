@@ -35,14 +35,12 @@
             </li>
         </ul>
     </nav>
+		<br>
+		
+        <?php 
+            include('footer.php')
+        ?>
 
-
-    <footer class="rodape">
-        <div class="descricao-footer">
-            <h1>Qualquer erro entre em contato com o email SuporteT.I@yahoo.com.br</h1>
-        </div>
-
-    </footer>
     </main>
 </body>
 

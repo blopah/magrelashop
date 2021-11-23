@@ -52,7 +52,7 @@
 									<td> " . $bike['categoria'] . " </td>
 									<td> " . $bike['quantidade'] . " </td>
 									<td class='actions'>
-										<a class='btn btn-warning btn-xs' href='editv2.php?" . $bike['id_produto'] ."'>Editar</a>
+										<a class='btn btn-warning btn-xs' href='editCadBike.php?" . $bike['id_produto'] ."'>Editar</a>
 										<a class='btn btn-danger btn-xs'  href='Confirmacao.php?" . $bike['id_produto'] ."' data-toggle='modal' data-target='#delete-modal'>Excluir</a>
 									</td>
 								</tr>";
@@ -66,13 +66,11 @@
 				<a href="cad_bicl_geral.php" class="btn btn-success" role="button">Cadastrar Bike</a>
 			</div> <!-- /#list -->
         </div>
+		<br>
 		
-        <footer class="rodape">
-            <div class="descricao-footer">
-                <h1>Qualquer erro entre em contato com o email SuporteT.I@yahoo.com.br</h1>
-            </div>
-
-        </footer>
+        <?php 
+            include('footer.php')
+        ?>
     </main>
 </body>
 

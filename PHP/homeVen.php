@@ -27,8 +27,8 @@
                     Controle de Caixa 
                 </a>
             </li>
-            <li class="item_menu" style="background-color: gray;">
-                <a href="#">
+            <li class="item_menu">
+                <a href="controle_estoque.php">
                     Controle de Estoque 
                 </a>
             </li>
@@ -39,14 +39,12 @@
             </li>
         </ul>
     </nav>
+		<br>
+		
+        <?php 
+            include('footer.php')
+        ?>
 
-
-    <footer class="rodape">
-        <div class="descricao-footer">
-            <h1>Qualquer erro entre em contato com o email SuporteT.I@yahoo.com.br</h1>
-        </div>
-
-    </footer>
     </main>
 </body>
 
